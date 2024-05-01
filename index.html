@@ -6,15 +6,11 @@
     <title>Centered Logo with Modified Size</title>
     <style>
         /* CSS Style */
-        body 
-            { 
- 	     
-	    
+        body {
             background-image: url('https://brandlogovector.com/wp-content/uploads/2022/02/Dunzo-Logo.png');
- 	    background-size: auto;
+            background-size: auto;
             background-position: 500px 70px;
             background-repeat: no-repeat;
-     
             margin: 0;
             padding: 0;
             display: flex;
@@ -24,29 +20,43 @@
             background-color: #000000; /* Optional: Set background color */
         }
 
-
         .logo {
             width: 230px; /* Adjust the width of the logo */
             height: auto; /* Maintain aspect ratio */
+            transition: transform 0.3s; /* Add smooth transition effect */
         }
 
         /* Modify size of the second logo */
         .logo.second {
             width: 200px; /* Adjust the width of the second logo */
             height: auto; /* Maintain aspect ratio */
+            margin: 0 25px;
         }
-       
-       h1 {
+
+        .logo:hover {
+            transform: scale(1.1); /* Scale the logo on hover */
+        }
+
+        h1 {
             color: white; /* Change the color of the heading */
-            font-size: 40px; /* Change the font size of the heading */
- 	    width: 200px; /* Adjust the width of the second logo */
+            font-size: 28px; /* Change the font size of the heading */
+            text-align: center; /* Center align the text */
+            font-family: sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Use the full viewport height */
-            
+            position: absolute; /* Position the heading absolutely */
+            top: 35%; /* Place it vertically at 50% from the top */
+            transform: translateY(-50%); /* Adjust to center vertically */
+        }
+
+        /* Style for the play button */
+        .play-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: -9999px; /* Hide the button off-screen */
+            left: -9999px; /* Hide the button off-screen */
         }
     </style>
 </head>
@@ -61,6 +71,21 @@
     <a class="logo second" href="https://apps.apple.com/in/app/dunzo-grocery-delivery-app/id1032391728">
     <img class="logo second" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1200px-Download_on_the_App_Store_Badge.svg.png" alt="Second Logo">
     </a>
+
+    <!-- Button to play the sound -->
+    <button class="play-button" onclick="playSound()">Play Sound</button>
+
+    <!-- Audio file for click sound -->
+    <audio id="clickSound">
+        <source src="https://cdn.pixabay.com/audio/2023/06/15/audio_a0e2c53290.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function playSound() {
+            var audio = document.getElementById("clickSound");
+            audio.play();
+        }
+    </script>
 
 </body>
 </html>
