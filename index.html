@@ -24,10 +24,21 @@
         .logo:hover {
             transform: scale(1.1); /* Scale the logo on hover */
         }
-
+.rainbow {
+    border: double 4px transparent;
+    border-radius: 25px;
+    background: linear-gradient(white, white),repeating-linear-gradient(to right, #4cafa9, #00ffc8, #1093e2);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    padding: 0;
+}
         h1 {
             color: white; /* Change the color of the heading */
-            font-size: 34px; /* Change the font size of the heading */
+            font-size: 40px; /* Change the font size of the heading */
             font-family: sans-serif;
             text-align: center; /* Center align the heading */
             margin-top: 90px; /* Add some top margin */
@@ -39,11 +50,11 @@
     <h1>Select Your Platform</h1>
 
     <a class="logo" href="https://play.google.com/store/apps/details?id=com.dunzo.user" onclick="playSound()">
-        <img src="https://www.kpnfarmfresh.com/kpn-assets/img/playstore.png" alt="First Logo">
+        <img src="https://www.kpnfarmfresh.com/kpn-assets/img/playstore.png" alt="First Logo" class="rainbow">
     </a>
 
     <a class="logo" href="https://apps.apple.com/in/app/dunzo-grocery-delivery-app/id1032391728" onclick="playSound()">
-        <img src="https://www.kpnfarmfresh.com/kpn-assets/img/applestore.png" alt="Second Logo">
+        <img src="https://www.kpnfarmfresh.com/kpn-assets/img/applestore.png" alt="Second Logo"class="rainbow">
     </a>
 
     <script>
