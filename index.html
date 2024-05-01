@@ -14,16 +14,44 @@
 
         .logo {
             width: 100%; /* Take up full width */
-            height: 300px; /* Maintain aspect ratio */
+            height: 200px; /* Maintain aspect ratio */
             display: block; /* Ensure it's a block element */
             margin-bottom: 20px; /* Add some spacing between logos */
             transition: transform 0.3s; /* Add smooth transition effect */
             text-align: center; /* Center align the logos */
-        }
+            padding: 0;
+           }
 
         .logo:hover {
             transform: scale(1.1); /* Scale the logo on hover */
         }
+
+.logo_dunzo {
+            width: 10%; /* Take up full width */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensure it's a block element */
+            margin-bottom: 20px; /* Add some spacing between logos */
+            transition: transform 0.3s; /* Add smooth transition effect */
+            text-align: center; /* Center align the logos */
+            padding: 0;
+            
+            
+            
+           }
+
+
+.rainbow_dunzo {
+    border: double 5px transparent;
+    border-radius: 60px;
+    background: linear-gradient(white, white),repeating-linear-gradient(to right, #4cafa9, #00ffc8, #1093e2);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    padding: 0;
+    }
 .rainbow {
     border: double 4px transparent;
     border-radius: 25px;
@@ -41,12 +69,18 @@
             font-size: 40px; /* Change the font size of the heading */
             font-family: sans-serif;
             text-align: center; /* Center align the heading */
-            margin-top: 90px; /* Add some top margin */
-            margin-bottom: 90px; /* Add some bottom margin */
+            margin-top: 40px; /* Add some top margin */
+            margin-bottom: 80px; /* Add some bottom margin */
         }
     </style>
 </head>
 <body>
+      <a class="logo_dunzo" img src="https://www.kpnfarmfresh.com/kpn-assets/img/playstore.png" alt="First Logo" class="rainbow">
+    </a>
+
+    
+    <img src="https://raw.githubusercontent.com/skmcajcnadc/logo/main/dunzo-logo.png" alt="logo" class="rainbow_dunzo">
+
     <h1>Select Your Platform</h1>
 
     <a class="logo" href="https://play.google.com/store/apps/details?id=com.dunzo.user" onclick="playSound()">
