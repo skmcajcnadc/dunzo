@@ -11,86 +11,88 @@
             margin: 0; /* Remove default margin */
             padding: 0; /* Remove default padding */
         }
-
-        .logo {
-            width: 100%; /* Take up full width */
-            height: 200px; /* Maintain aspect ratio */
-            display: block; /* Ensure it's a block element */
-            margin-bottom: 20px; /* Add some spacing between logos */
-            transition: transform 0.3s; /* Add smooth transition effect */
+        .logo-container {
             text-align: center; /* Center align the logos */
-            padding: 0;
-           }
-
-        .logo:hover {
+            position: relative; /* Make the container relatively positioned */
+            margin-top: 20px; /* Add margin to the top */
+        }
+        .logo {
+            width: 200px; /* Set width of the logo */
+            height: auto; /* Maintain aspect ratio */
+            display: inline-block; /* Ensure it's an inline-block element */
+            margin: 20px; /* Add some spacing around logos */
+            transition: transform 0.3s; /* Add smooth transition effect */
+            border: double 4px transparent; /* Default border style */
+            border-radius: 25px; /* Rounded border */
+        }
+        .logo:not(.dunzo-logo):hover {
             transform: scale(1.1); /* Scale the logo on hover */
         }
-
-.logo_dunzo {
-            width: 10%; /* Take up full width */
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Ensure it's a block element */
-            margin-bottom: 20px; /* Add some spacing between logos */
-            transition: transform 0.3s; /* Add smooth transition effect */
-            text-align: center; /* Center align the logos */
-            padding: 0;
-            
-            
-            
-           }
-
-
-.rainbow_dunzo {
-    border: double 5px transparent;
-    border-radius: 60px;
-    background: linear-gradient(white, white),repeating-linear-gradient(to right, #4cafa9, #00ffc8, #1093e2);
+      .rainbow {   
+   background: linear-gradient(#be0f0f, #ed1212), repeating-linear-gradient(to right, #1c0be9, #ff9800, #4caf50);
     background-origin: border-box;
     background-clip: content-box, border-box;
     animation-name: rainbow;
-    animation-duration: 3s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     padding: 0;
-    }
-.rainbow {
-    border: double 4px transparent;
-    border-radius: 25px;
-    background: linear-gradient(white, white),repeating-linear-gradient(to right, #4cafa9, #00ffc8, #1093e2);
+
+      }
+        .rainbow_dunzo {
+    border-radius: 15px;
+    background: linear-gradient(#be0f0f, #ed1212), repeating-linear-gradient(to right, #1c0be9, #ff9800, #4caf50);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    animation-name: rainbow;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: rainbow 30s linear infinite; /* Modified animation properties */
     padding: 0;
 }
+       
+        @keyframes rainbow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .dunzo-logo {
+            position: absolute; /* Position the Dunzo logo absolutely */
+            top: -270px; /* Adjust the top position as needed */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            border-color: #FFD700; /* Golden border color */
+            z-index: 1; /* Ensure the Dunzo logo is above other content */
+            border: double 4px transparent; /* Default border style */
+            border-radius: 50px; 
+        }
+        .dunzo-logo:not(:hover) {
+            transform:0; /* Remove hover effect for Dunzo logo */
+        }
         h1 {
             color: white; /* Change the color of the heading */
             font-size: 40px; /* Change the font size of the heading */
             font-family: sans-serif;
             text-align: center; /* Center align the heading */
-            margin-top: 40px; /* Add some top margin */
-            margin-bottom: 80px; /* Add some bottom margin */
+            margin-top: 310px; /* Add some top margin */
+            margin-bottom: 90px; /* Add some bottom margin */
         }
     </style>
 </head>
 <body>
-      <a class="logo_dunzo" img src="https://www.kpnfarmfresh.com/kpn-assets/img/playstore.png" alt="First Logo" class="rainbow">
-    </a>
-
-    
-    <img src="https://raw.githubusercontent.com/skmcajcnadc/logo/main/dunzo-logo.png" alt="logo" class="rainbow_dunzo">
-
-    <h1>Select Your Platform</h1>
-
-    <a class="logo" href="https://play.google.com/store/apps/details?id=com.dunzo.user" onclick="playSound()">
-        <img src="https://www.kpnfarmfresh.com/kpn-assets/img/playstore.png" alt="First Logo" class="rainbow">
-    </a>
-
-    <a class="logo" href="https://apps.apple.com/in/app/dunzo-grocery-delivery-app/id1032391728" onclick="playSound()">
-        <img src="https://www.kpnfarmfresh.com/kpn-assets/img/applestore.png" alt="Second Logo"class="rainbow">
-    </a>
-
+    <div class="logo-container">
+        <img src="https://raw.githubusercontent.com/skmcajcnadc/logo/main/dunzo-logo.png" alt="Dunzo Logo" class="logo rainbow_dunzo dunzo-logo">
+        <h1>Select Your Platform</h1>
+        <a class="logo" href="https://play.google.com/store/apps/details?id=com.dunzo.user" onclick="playSound()">
+            <img src="https://www.kpnfarmfresh.com/kpn-assets/img/playstore.png" alt="Google Play Store" class="logo rainbow">
+        </a>
+        <a class="logo" href="https://apps.apple.com/in/app/dunzo-grocery-delivery-app/id1032391728" onclick="playSound()">
+            <img src="https://www.kpnfarmfresh.com/kpn-assets/img/applestore.png" alt="Apple App Store" class="logo rainbow">
+        </a>
+    </div>
     <script>
         function playSound() {
             // Add your sound playing logic here
