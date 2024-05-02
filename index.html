@@ -14,23 +14,24 @@
         .logo-container {
             text-align: center; /* Center align the logos */
             position: relative; /* Make the container relatively positioned */
-            margin-top: 20px; /* Add margin to the top */
+            margin-top: 10px; /* Add margin to the top */
         }
         .logo {
+            
             width: 200px; /* Set width of the logo */
-            left: 49%;
             height: auto; /* Maintain aspect ratio */
             display: inline-block; /* Ensure it's an inline-block element */
-            margin: 20px; /* Add some spacing around logos */
+            margin: 10px; /* Add some spacing around logos */
             transition: transform 0.3s; /* Add smooth transition effect */
             border: double 4px transparent; /* Default border style */
             border-radius: 25px; /* Rounded border */
+            margin-left: 0px
         }
         .logo:not(.dunzo-logo):hover {
             transform: scale(1.1); /* Scale the logo on hover */
         }
       .rainbow {   
-   background: linear-gradient(#be0f0f, #ed1212), repeating-linear-gradient(to right, #1c0be9, #ff9800, #4caf50);
+   background: linear-gradient(#be0f0f, #ed1212), repeating-linear-gradient(to right,#00CED1, #00FFFF, #4caf50);
     background-origin: border-box;
     background-clip: content-box, border-box;
     animation-name: rainbow;
@@ -42,7 +43,7 @@
       }
         .rainbow_dunzo {
     border-radius: 15px;
-    background: linear-gradient(#be0f0f, #ed1212), repeating-linear-gradient(to right, #1c0be9, #ff9800, #4caf50);
+    background: linear-gradient(#be0f0f, #ed1212), repeating-linear-gradient(to right, #D2691E, #FFFFFF, #006400);
     background-origin: border-box;
     background-clip: content-box, border-box;
     animation: rainbow 30s linear infinite; /* Modified animation properties */
@@ -61,10 +62,10 @@
             }
         }
         .dunzo-logo {
-           width: 130px;
+           width: 100px;
             position: absolute; /* Position the Dunzo logo absolutely */
             top: -270px; /* Adjust the top position as needed */
-            left: 49%; /* Center horizontally */
+            left: auto; /* Center horizontally */
             transform: translateX(-55%); /* Center horizontally */
             border-color: #FFD700; /* Golden border color */
             z-index: 1; /* Ensure the Dunzo logo is above other content */
@@ -87,7 +88,7 @@
 <body>
     <div class="logo-container">
         <img src="https://raw.githubusercontent.com/skmcajcnadc/logo/main/dunzo-logo.png" alt="Dunzo Logo" class="logo rainbow_dunzo dunzo-logo">
-        <h1>Touch Your Platform</h1>
+        <h1>Pick Your Platform</h1>
         <a class="logo" href="https://play.google.com/store/apps/details?id=com.dunzo.user" onclick="playSound()">
             <img src="https://www.kpnfarmfresh.com/kpn-assets/img/playstore.png" alt="Google Play Store" class="logo rainbow">
         </a>
